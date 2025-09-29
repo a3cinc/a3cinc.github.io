@@ -1,21 +1,37 @@
+/* Google Font */
+body { font-family: 'Poppins', sans-serif; }
+
+/* Custom Colors */
+:root {
+  --primary-color: #4bc0c8; /* light teal */
+  --primary-dark: #33a1a8;
+  --light-bg: #f0f8f8; /* light background */
+}
+
+/* Navbar */
+.bg-custom { background: var(--primary-color); }
+
 /* Hero */
 .hero {
   min-height: 60vh;
-  background: linear-gradient(135deg,#003366,#0055a5);
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
   display:flex;
   align-items:center;
   justify-content:center;
+  color: #fff;
 }
 
-/* Corporate Cards */
+/* Section Headings */
+.text-custom { color: var(--primary-dark); }
+
+/* Cards */
 .corporate-card {
-  background: linear-gradient(135deg, #0073e6, #0055a5);
-  color: #f1f1f1;
-  border: none;
+  background: linear-gradient(135deg, #33a1a8, #4bc0c8);
+  color: #fff;
   border-radius: 12px;
+  border: none;
   transition: transform 0.3s, box-shadow 0.3s;
 }
-
 .corporate-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
@@ -23,20 +39,25 @@
 
 /* Contact Card */
 .contact-card {
-  background: linear-gradient(135deg, #0055a5,#0073e6);
+  background: linear-gradient(135deg, #33a1a8, #4bc0c8);
   border-radius:12px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   color:#fff;
 }
 
-/* Links */
-.contact-card a {
-  text-decoration:none;
-  color:#fff;
+/* Background for services section */
+.bg-light-custom { background-color: var(--light-bg); }
+
+/* Buttons */
+.btn-outline-dark {
+  border-color: #fff;
+  color: #fff;
+}
+.btn-outline-dark:hover {
+  background-color: #fff;
+  color: var(--primary-dark);
 }
 
-.contact-card a:hover {
-  text-decoration:underline;
-}
-
-/* Responsive adjustments (Bootstrap handles most) */
+/* Links in contact */
+.contact-card a { text-decoration:none; color:#fff; }
+.contact-card a:hover { text-decoration:underline; }
