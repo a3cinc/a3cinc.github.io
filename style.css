@@ -5,12 +5,12 @@
   box-sizing: border-box;
 }
 
-/* Body (Light mode default) */
+/* Body */
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   line-height: 1.6;
   color: #1a1a1a;
-  background: #f3f4f6; /* Soft gray background */
+  background: #f3f4f6; /* Light gray */
   transition: background 0.3s, color 0.3s;
 }
 
@@ -25,7 +25,6 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: background 0.3s;
 }
 
 .logo {
@@ -156,7 +155,7 @@ body {
   color: #444;
 }
 
-/* Dark Mode Styles */
+/* Dark Mode */
 body.dark {
   background: #1e1e1e;
   color: #f3f3f3;
@@ -179,4 +178,70 @@ body.dark .card {
 body.dark .footer {
   background: #2c2c2c;
   color: #aaa;
+}
+
+/* ----------------------------- */
+/* RESPONSIVE DESIGN             */
+/* ----------------------------- */
+
+/* Tablets (≤ 768px) */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .nav ul {
+    width: 100%;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
 }
